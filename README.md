@@ -21,7 +21,7 @@ PetAdoption is a web application designed to connect individuals looking to adop
 
 * **Pet Listings**: Search available pets for adoption.
 * **Pet Submission**: List pets available for adoption.
-* **User Authentication**: Secure login and registration system via sessions and cookies.
+* **User Authentication**: login and registration system via sessions and cookies.
 
 ## Technologies Used
 
