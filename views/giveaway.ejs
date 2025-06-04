@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> ADOPT ME </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="adopt_a_pet.css">
+        <script src = "scripts/checkGive.js"></script>
+    </head>
+
+    <body> 
+       
+        <div class="container">
+
+            <%- include('header.ejs') %>
+        
+
+            <%- include('aside.ejs') %>
+
+
+
+        <div class="main"  >
+            <h2>Put your digital pet up for adoption!!</h2>
+            
+            <h3 style="font-size: small;">Note that we do <span style="color:red;font-weight:bold;">NOT</span> accept AI-generated pets >:(</h3>
+            <form action="/giveaway" method="post" oninput="validate()">
+
+                <fieldset>
+                    <legend>Websurfer's personal info</legend> 
+                    
+                        <p ><label for="lastName">Family Name:</label>
+                            <input type="text" id="lastName" name="lastName"></p>
+                        <p><label for="firstName">First Name:</label>
+                            <input type="text" id="firstName" name="firstName"></p>
+                        <p><label for="email">Email:</label>
+                            <input type="text" id="email" name="email"></p>
+                        
+                   
+                </fieldset>
+        
+                <fieldset>
+                    <legend>Info on your pet</legend> 
+                    
+                    <p><label>Pet type:</label>
+                        <input type="radio" id="dog" name="dogOrCat" value="dog"><label for="dog">dog</label>
+                        <input type="radio" id="cat" name="dogOrCat" value="cat"><label for="cat">cat</label>
+                    </p>
+                    <p><label>Choose your pet's gender: </label><br>
+                        <input type="radio" id="female" name="gender" value="f"><label for="female">Female</label>
+                        <input type="radio" id="male" name="gender" value="m"><label for="male">Male</label>
+                        <input type="radio" id="othegen" name="gender" value="othegen"><label for="othegen">Other</label>
+                    </p>
+                    <p>
+                    
+                        <label for="age">Your pet's age:</label>
+    
+                        <select name="age" id="age">
+                          <option value="none">Please select an age</option>
+                          <option value="baby">Less than 1 year</option>
+                          <option value="toddler">1 to 3 years</option>
+                          <option value="middleage">3 to 10 years</option>
+                          <option value="senior">10+ years</option>
+                          
+                        </select> 
+                    </p>
+                    <p >Breed of the pet? Select all:<br>
+                            
+                            <input type="checkbox" id="pixel" name="breed" value="pixel">
+                            <label for="pixel"> pixel</label>
+                            <input type="checkbox" id="lineart" name="breed" value="lineart">
+                            <label for="lineart"> lineart</label>
+                            <input type="checkbox" id="mutt" name="breed" value="mutt">
+                            <label for="mutt"> mutt</label><br>
+                            <input type="checkbox" id="domestic" name="breed" value="domestic">
+                            <label for="domestic"> domestic</label>
+                            <input type="checkbox" id="y2k" name="breed" value="y2k">
+                            <label for="y2k"> y2k</label>
+                            <input type="checkbox" id="other" name="breed" value="other">
+                            <label for="other"> Other</label><br></p>
+
+                    <p><label>Gets along with which others?</label><br>
+                            <input type="checkbox" id="likesdog" name="getsalong" value="likesdog">
+                            <label for="likesdog"> dogs</label>
+                            <input type="checkbox" id="likescats" name="getsalong" value="likescats">
+                            <label for="likescats"> cats</label>
+                            <input type="checkbox" id="smallkids" name="getsalong" value="smallkids">
+                            <label for="smallkids"> small kids</label><br>
+                            <input type="checkbox" id="notfriendly" name="getsalong" value="notfriendly">
+                            <label for="notfriendly"> no other companions</label><br>
+                            </p>
+
+                            <p><label for="comment">Additional comments</label><br>
+                                <textarea id="comment" name="comment" rows="3" cols="30"></textarea>
+                                
+                            </p>
+                    
+                    </fieldset>
+                    <p>
+                    <input type="submit" id="submit" value="Submit" disabled="true">
+                    <input type="reset"></p>
+        
+                
+                </form>
+            
+        </div>
+        
+
+
+
+
+        <%- include('footer.ejs') %>
+        
+    </div>
+
+    <script src = "scripts/dateTime.js"></script>
+
+    </body>
+
+</html>

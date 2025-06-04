@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> ADOPT ME </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="adopt_a_pet.css">
+    </head>
+
+    <body> 
+       
+        <div class="container">
+
+            <%- include('header.ejs') %>
+        
+
+            <%- include('aside.ejs') %>
+
+
+
+            <div class="main">
+                <h2>Browse our cyber pets!!</h2>
+                <h3>May you find your furrever friend</h3>
+            
+                <% if (pet.length > 0) { %>
+                    <% pet.forEach(pet => { %>
+                        <p>
+                            Pet owner: <%= pet.split(":")[3] %><br>
+                            Pet type: <%= pet.split(":")[5] %><br>
+                            Pet gender: <%= pet.split(":")[6] %><br>
+                            Pet age: <%= pet.split(":")[7] %><br>
+                            Pet breed: <%= pet.split(":")[8] %><br>
+                            Pet companions: <%= pet.split(":")[9] %>
+                        </p>
+                    <% }); %>
+                <% } else { %>
+                    <p>No results found. Your digiPet is in a differrent website :(</p>
+                <% } %>
+            </div>
+        
+
+
+
+
+        <%- include('footer.ejs') %>
+        
+    </div>
+
+    <script src = "scripts/dateTime.js"></script>
+
+    </body>
+
+</html>

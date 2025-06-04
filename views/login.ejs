@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> ADOPT ME </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="adopt_a_pet.css">
+    </head>
+
+    <body> 
+       
+        <div class="container">
+
+        <%- include('header.ejs') %>
+        
+
+        <%- include('aside.ejs') %>
+
+
+
+        
+
+
+
+
+        <div class="main" >
+            <h2>Login to your account</h2>
+            
+            <h3>Enter your username and password to begin</h3>
+            <p><%= message %></p>
+            <form action="/authenticate" method="POST">
+                
+                <label>Enter your username:</label>
+                <input type="text" id="username" name="username" placeholder="Username">
+                <br>
+                <label>Enter your password:</label>
+                <input type="password" id="password" name="password" placeholder="Password">
+                <br><br>
+                <button type="submit">Login</button>
+            </form>
+            
+        </div>
+        
+        <%- include('footer.ejs') %>
+
+
+
+        
+    </div>
+
+   
+    <script src = "scripts/dateTime.js"></script>
+    
+    </body>
+
+</html>

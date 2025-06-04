@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> ADOPT ME </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="adopt_a_pet.css">
+        <script src="scripts/checkSearch.js"></script>
+    </head>
+
+    <body> 
+       
+        <div class="container">
+
+            <%- include('header.ejs') %>
+        
+
+            <%- include('aside.ejs') %>
+
+
+
+        <div class="main" >
+            <h2>Tell us about your ideal cyberfriend!!</h2>
+            
+            <h3>Fill out the form to find matches</h3>
+            <form action="/search" method="post" oninput="validate()">
+
+                
+        
+                <fieldset>
+                    <legend>Info on your preferred pet</legend> 
+                    <p><label>Pet type?</label><br>
+                        <input type="radio" id="dog" name="dogOrCat" value="dog"><label for="dog">dog</label>
+                        <input type="radio" id="cat" name="dogOrCat" value="cat"><label for="cat">cat</label>
+                    </p>
+                    <p><label>Choose a preferred gender: </label><br>
+                        <input type="radio" id="female" name="gender" value="f"><label for="female">Female</label>
+                        <input type="radio" id="male" name="gender" value="m"><label for="male">Male</label>
+                        <input type="radio" id="nopref" name="gender" value="nopref"><label for="nopref">No preference</label>
+                    </p>
+                    <p>
+                    
+                        <label for="age">Preferred age range:</label>
+    
+                        <select name="age" id="age">
+                            <option value="noprefage">No age preference</option>
+                          <option value="baby">Less than 1 year</option>
+                          <option value="toddler">1 to 3 years</option>
+                          <option value="middleage">3 to 10 years</option>
+                          <option value="senior">10+ years</option>
+                        </select> 
+                    </p>
+                    <p >Breed of the pet? Select all that apply:
+                            <br>
+                            <input type="checkbox" id="pixel" name="pixel" value="pixel">
+                            <label for="pixel"> pixel</label>
+                            <input type="checkbox" id="lineart" name="lineart" value="lineart">
+                            <label for="lineart"> lineart</label>
+                            <input type="checkbox" id="mutt" name="mutt" value="mutt">
+                            <label for="mutt"> mutt</label><br>
+                            <input type="checkbox" id="domestic" name="domestic" value="domestic">
+                            <label for="domestic"> domestic</label>
+                            <input type="checkbox" id="y2k" name="y2k" value="y2k">
+                            <label for="y2k"> y2k</label>
+                            <input type="checkbox" id="nobreedpref" name="nobreedpref" value="nobreedpref">
+                            <label for="nobreedpref"> No preference</label><br></p>
+
+                    <p><label>Gets along with which others?</label><br>
+                            <input type="checkbox" id="likesdog" name="likesdog" value="likesdog">
+                            <label for="likesdog"> dogs</label>
+                            <input type="checkbox" id="likescats" name="likescats" value="likescats">
+                            <label for="likescats"> cats</label>
+                            <input type="checkbox" id="smallkids" name="smallkids" value="smallkids">
+                            <label for="smallkids"> small kids</label><br>
+                            <input type="checkbox" id="notfriendly" name="notfriendly" value="notfriendly">
+                            <label for="notfriendly"> no other companions</label><br>
+                            </p>
+        
+                        
+                        
+                        
+        
+                   
+                </fieldset>
+        
+                <p>Click submit to find your perfect friend! <br>
+                    <input type="submit" id="submit" value="Submit" disabled="true">
+                    <input type="reset"></p>
+        
+                
+                </form>
+            
+        </div>
+        
+
+
+
+
+        <%- include('footer.ejs') %>
+        
+    </div>
+
+    <script src = "scripts/dateTime.js"></script>
+
+    </body>
+
+</html>
