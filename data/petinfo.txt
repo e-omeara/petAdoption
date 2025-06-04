@@ -1,0 +1,6 @@
+1:libby:smith:sam:s@s.sd:dog:m:toddler:y2k:likescats:s
+2:libby:ford:florence:d@d.cd:cat:f:senior:lineart,y2k:likescats:qwsdx
+3:libby:salt:sally:s@sd.cd:cat:f:middleage:mutt:likescats:wsd
+4:libby:flipper:fiona:f@gf.fg:cat:othegen:toddler:mutt,y2k:smallkids:asc
+5:admin:wrfv:meowy:w@w.wd:dog:m:senior:domestic:likesdog,likescats,smallkids:jh
+6:admin:erg:meowth:w@w.cd:dog:m:baby:lineart,mutt:likesdog,likescats,smallkids:zsxc
